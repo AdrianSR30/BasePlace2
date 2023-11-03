@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Red1">#C62828</color>
+    <color name="Red2">#B71C1C</color>
+    <color name="Blue1">#2196F3</color>
+    <color name="Blue2">#1976D2</color>
+    <color name="Green1">#00BFA5</color>
+    <color name="Green2">#4CAF50</color>
+    <color name="Crema">#FFEB3B</color>
+    <color name="Amber">#FFC107</color>
+    <color name="Orange">#FF8F00</color>
+    <color name="OrangeRed">#DD2C00</color>
+    <color name="Cafe">#795548</color>
+    <color name="GrisSuave">#BDBDBD</color>
+    <color name="NegroG">#212121</color>
+    <color name="yellow">#F9BC28</color>
+    <color name="green">#23631F</color>
+    <color name="red">#CF010B</color>
+    <color name="cream">#E2CAAE</color>
+    <color name="cherry">#952F57</color>
+    <color name="blue">#0277BD</color>
+    <color name="orange">#FC4B08</color>
+    <color name="button">#01578B</color>
+    <color name="gray">#8c8c8c</color>
+</resources>

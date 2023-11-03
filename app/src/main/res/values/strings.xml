@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="text">TEXTO</string>
+    <string name="boton">Entrar</string>
+
+</resources>
