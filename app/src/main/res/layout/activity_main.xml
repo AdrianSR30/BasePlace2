@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#E6C153"
     tools:context=".activity.MainActivity">
 
     <View
         android:id="@+id/blueBackground"
         android:layout_width="411dp"
-        android:layout_height="134dp"
+        android:layout_height="150dp"
         android:background="@color/button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,9 +20,9 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/blueBackground"
+        app:layout_constraintTop_toBottomOf="@+id/btninfo"
         app:srcCompat="@drawable/lppbp" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -39,11 +39,48 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:background="@color/white"
         app:iconifiedByDefault="false"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsalir"
         app:queryHint="Buscar transporte" />
 
+    <Button
+        android:id="@+id/btninfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/button"
+        android:text="Información"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/blueBackground"
+        app:layout_constraintTop_toTopOf="@+id/blueBackground" />
+
+    <Button
+        android:id="@+id/btnconductor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/button"
+        android:text="Conductores"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/btninfo"
+        app:layout_constraintTop_toTopOf="@+id/blueBackground" />
+
+    <Button
+        android:id="@+id/btnsalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/button"
+        android:text="Cerrar sesión"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/btnconductor"
+        app:layout_constraintTop_toTopOf="@+id/blueBackground" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
