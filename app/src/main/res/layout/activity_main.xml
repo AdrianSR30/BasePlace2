@@ -4,25 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/amarilloc1"
+    android:background="@color/white"
     tools:context=".activity.MainActivity">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/svSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:iconifiedByDefault="false"
-        app:queryHint="Buscar titulo"
-        android:background="@color/white"
-        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/blueBackground"
+        android:layout_width="411dp"
+        android:layout_height="134dp"
+        android:background="@color/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/blueBackground"
+        app:srcCompat="@drawable/lppbp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvLista"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/svSearch" />
+        android:layout_width="385dp"
+        android:layout_height="533dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueBackground" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSearch"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        app:iconifiedByDefault="false"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Buscar transporte" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
