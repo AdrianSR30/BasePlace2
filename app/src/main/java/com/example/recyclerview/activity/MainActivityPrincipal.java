@@ -12,23 +12,21 @@ import com.example.recyclerview.R;
 
 public class MainActivityPrincipal extends AppCompatActivity {
 
+    Button Registrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_principal);
 
-        Button button1 = findViewById(R.id.btnis);
-        button1.setOnClickListener(new View.OnClickListener() {
+        Registrar = (Button)findViewById(R.id.btn_registrar);
+        Registrar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                openNewActivity();
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivityPrincipal.this,RegistroActivity.class);
+                startActivity(i);
             }
         });
 
     }
 
-    public void openNewActivity() {
-        Intent intent = new Intent(this, Login.class); // Reemplaza SecondActivity con el nombre de tu siguiente Activity
-        startActivity(intent);
-    }
 }
