@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.recyclerview.R;
 import com.example.recyclerview.adaptador.RecyclerAdapter;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerAdapter.R
     private RecyclerAdapter adapter;
     private List<ItemList> items;
 
+    Button CerrarSesion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,17 @@ public class MainActivity extends AppCompatActivity implements RecyclerAdapter.R
         initViews();
         initValues();
         initListener();
+
+        //BOTON CERRAR SESIÓN
+        CerrarSesion = (Button)findViewById(R.id.btnsalir);
+        CerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,MainActivityPrincipal.class);
+                startActivity(i);
+            }
+        });
+
     }
 
     private void initViews(){
@@ -51,15 +65,15 @@ public class MainActivity extends AppCompatActivity implements RecyclerAdapter.R
 
     private List<ItemList> getItems() {
         List<ItemList> itemLists = new ArrayList<>();
-        itemLists.add(new ItemList("Autobus Azul Blanco", "Ruta: || Horario:.", R.drawable.azulblanco));
-        itemLists.add(new ItemList("Calafia Crema Rojo", "Ruta: || Horario:.", R.drawable.creamarojo));
-        itemLists.add(new ItemList("Camion Azul Blanco", "Ruta: || Horario:.", R.drawable.azulblanco2camion));
-        itemLists.add(new ItemList("Transporte", "Ruta: || Horario:.", R.drawable.blancocafe1));
-        itemLists.add(new ItemList("Autobus Naranja Negro", "Ruta: || Horario:.", R.drawable.naranjanegro));
-        itemLists.add(new ItemList("Autobus Rojo Crema", "Ruta: || Horario:.", R.drawable.rojocrema1));
-        itemLists.add(new ItemList("Taxi Rojo", "Ruta: || Horario:.", R.drawable.rojotaxi));
-        itemLists.add(new ItemList("Calafia Rojo Crema", "Ruta: || Horario:.", R.drawable.rojocrema2));
-        itemLists.add(new ItemList("Calafia Verde Crema", "Ruta: || Horario:.", R.drawable.verdecrema1));
+        itemLists.add(new ItemList("Autobus Azul Blanco", "Ruta: Horario: Costo: ", R.drawable.azulblanco));
+        itemLists.add(new ItemList("Calafia Crema Rojo", "Ruta:  Horario: Costo: ", R.drawable.creamarojo));
+        itemLists.add(new ItemList("Camion Azul Blanco", "Ruta: Horario: Costo: ", R.drawable.azulblanco2camion));
+        itemLists.add(new ItemList("Transporte", "Ruta: Horario: Costo: ", R.drawable.blancocafe1));
+        itemLists.add(new ItemList("Autobus Naranja Negro", "Ruta: Horario: Costo: ", R.drawable.naranjanegro));
+        itemLists.add(new ItemList("Autobus Rojo Crema", "Ruta:  Horario: Costo: ", R.drawable.rojocrema1));
+        itemLists.add(new ItemList("Taxi Rojo", "Ruta: Horario: Costo: ", R.drawable.rojotaxi));
+        itemLists.add(new ItemList("Calafia Rojo Crema", "Ruta: Horario: Costo: ", R.drawable.rojocrema2));
+        itemLists.add(new ItemList("Calafia Verde Crema", "Ruta: Horario: Costo: ", R.drawable.verdecrema1));
         //itemLists.add(new ItemList("Autobus", "Ruta: || Horario:.", R.drawable.v));
         //itemLists.add(new ItemList("Taxi", "Ruta: || Horario:.", R.drawable.super_vegeta));
         //itemLists.add(new ItemList("Autobus", "Ruta: || Horario:.", R.drawable.vegeta_blue));
